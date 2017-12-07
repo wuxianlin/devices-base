@@ -252,6 +252,8 @@
     .line 1365
     iget-object v0, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
+    if-eqz v0, :cond_flyme_0
+
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -259,6 +261,12 @@
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/res/ResourcesImpl;->getThemeFileStream(ILjava/lang/String;Landroid/util/TypedValue;)Ljava/io/InputStream;
 
     move-result-object v0
+
+    return-object v0
+
+    :cond_flyme_0
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

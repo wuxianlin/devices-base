@@ -2171,6 +2171,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
+    .line 1737
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
 
     invoke-direct {p0}, Landroid/widget/ScrollView;->isFlymeThemeLight()Z
 
@@ -2181,9 +2183,6 @@
     return-void
 
     :cond_flyme_0
-
-    .line 1737
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
 
     .line 1738
     iget-object v7, p0, Landroid/widget/ScrollView;->mEdgeGlowTop:Landroid/widget/EdgeEffect;

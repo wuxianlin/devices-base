@@ -2821,7 +2821,7 @@
 
     if-eqz v0, :cond_flyme_0
 
-    invoke-direct {p0 .. p3}, Landroid/app/Notification$Builder;->setFlymeProgressBar(ZLandroid/widget/RemoteViews;Landroid/os/Bundle;)Z
+    invoke-direct/range {p0 .. p3}, Landroid/app/Notification$Builder;->setFlymeProgressBar(ZLandroid/widget/RemoteViews;Landroid/os/Bundle;)Z
 
     move-result v0
 

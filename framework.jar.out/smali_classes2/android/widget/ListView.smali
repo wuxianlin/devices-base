@@ -72,6 +72,20 @@
 
 .field private mFlymeSelectToBottom:Z
 
+.field private mIsFlymeBeginDragSelect:Z
+
+.field private mIsFlymeCheckBoxAnim:Z
+
+.field private mIsFlymeDividerInside:Z
+
+.field private mIsFlymeOutOfDragRegion:Z
+
+.field private mIsFlymeOutOfListContent:Z
+
+.field protected mLastDownSelectPosition:I
+
+.field protected mLastUpSelectPosition:I
+
 .field private mAreAllItemsSelectable:Z
 
 .field private final mArrowScrollFocusResult:Landroid/widget/ListView$ArrowScrollFocusResult;
@@ -335,7 +349,8 @@
     .line 197
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 157
+    invoke-direct/range {p0 .. p4}, Landroid/widget/ListView;->initFlymeExtraFields(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
     return-void
 .end method
 
